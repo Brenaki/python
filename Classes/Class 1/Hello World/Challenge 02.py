@@ -1,4 +1,5 @@
 print('===== Challenge 02 =====')
+
 day = input ('What day were you born?\n')
 month = input ('What month were you born?\n')
 year = input ('What year were you born?\n')
