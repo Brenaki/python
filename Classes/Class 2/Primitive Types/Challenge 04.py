@@ -1,0 +1,16 @@
+print('===== Challenge 04 =====')
+
+some = input('Write something.\n')
+
+print(some.isalnum())
+print(some.isalpha())
+print(some.isascii())
+print(some.isdecimal())
+print(some.isdigit())
+print(some.isidentifier())
+print(some.islower())
+print(some.isnumeric())
+print(some.isprintable())
+print(some.isspace())
+print(some.istitle())
+print(some.isupper())

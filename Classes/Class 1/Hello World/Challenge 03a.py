@@ -1,4 +1,4 @@
-print('===== Challenge 03 =====')
+print('===== Challenge 03a =====')
 
 n1_s = input ('Write fist number.\n')
 n2_s = input ('Write second number.\n')
