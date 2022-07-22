@@ -2,6 +2,7 @@ print('===== Challenge 04 =====')
 
 some = input('Write something.\n')
 
+print(type(some))
 print(some.isalnum())
 print(some.isalpha())
 print(some.isascii())
