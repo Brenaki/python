@@ -2,10 +2,6 @@
 
 <div>
 <h2>Welcome!</h2>
-</div>
-
-## What's that?
-
-<div>
+### What's that?
     I'm studying Python, so here is my studies
 </div>
