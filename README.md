@@ -2,6 +2,6 @@
 
 <div>
 <h2>Welcome!</h2>
-### What's that?
-    I'm studying Python, so here is my studies
+<h3>What's that?</h3>
+    <p>I'm studying Python, so here is my studies</p>
 </div>
