@@ -10,11 +10,11 @@ name = input('What\'s your name?\n')
 gender = input('What\'s your gender? "M" or "F" or "n-B"\n')
 
 # Check
-if(gender == 'M'):
+if(gender == 'M' or gender == 'm'):
     print('Your name\'s {} and your gender is masculine'.format(name))
-elif(gender == 'F'):
+elif(gender == 'F' or gender == 'f'):
     print('Your name\'s {} and your gender is feminine'.format(name))
-elif(gender == 'n-B'):
+elif(gender == 'n-B' or gender == 'n-b'):
     print('Your name\'s {} and your gender is non binary'.format(name))
 else:
     print('Invalid name and gender')
