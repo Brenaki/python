@@ -6,7 +6,7 @@
 
 import pandas as pd
 
-tabela = pd.read_csv(r'.\advertising.csv')
+tabela = pd.read_csv(r'D:\Documentos\GitHub\My\Intensivão_de_Python\[Aula 4]\Exercício\advertising.csv')
 
 print(tabela)
 
@@ -81,7 +81,7 @@ print(r2_score(y_teste, previsao_arvoredecisao))
 tabela_auxiliar = pd.DataFrame()
 tabela_auxiliar['y_teste'] = y_teste
 tabela_auxiliar['arvore decisao'] = previsao_arvoredecisao
-tabela_auxiliar['regresso linear'] = previsao_regressaolinear
+# tabela_auxiliar['regresso linear'] = previsao_regressaolinear
 
 plt.figure(figsize=(18,6))
 sns.lineplot(data=tabela_auxiliar)
@@ -94,7 +94,7 @@ plt.show()
 ## Como fazer uma nova previsão?
 ### o melhor modelo é a árvore de decisão
 
-novos = pd.read_csv(r'.\novos.csv')
+novos = pd.read_csv(r'D:\Documentos\GitHub\My\Intensivão_de_Python\[Aula 4]\Exercício\novos.csv')
 print(novos)
 
 
