@@ -13,13 +13,17 @@ while True:
             r_pass = input('Quer redifinir sua senha(N/Y): ')
             if r_pass == 'N' or r_pass == 'n':
                continue
-            else:
+            elif r_pass == 'Y' or r_pass == 'y':
                 new_P = input('New password: ')
-                while password != new_P:
+                while new_P != password:
                       user = input('Your user: ')
                       password = input('Your password: ')
-                print('Sua nova senha foi redifinida!')
-                continue
+                      break
+                print('Sua nova senha foi redifinida, com Sucesso!')
+                if password == new_P:
+                  break
+                else:
+                  continue
         elif password == '1234' or password == new_P:
             print('Logado!')
             break
