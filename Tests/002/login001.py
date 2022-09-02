@@ -1,8 +1,6 @@
 # Fazer uma sistema de login, porém é como se o usuario
 # estivesse errando a senha, então pode redefinir a senha
 # e poderá logar
-from ast import Break
-
 
 new_P = '1234'
 
@@ -27,5 +25,3 @@ while True:
             break
     else:
       break
-
-
