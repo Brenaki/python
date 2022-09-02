@@ -1,6 +1,6 @@
-# Fazer uma sistema de login, porém é como se o usuario
-# estivesse errando a senha, então pode redefinir a senha
-# e poderá logar
+# Fazer uma sistema de login, se o usuario
+# estivesse errando a senha, ele poderá redefinir a senha
+# e assim ele pode logar
 
 new_P = '1234'
 
