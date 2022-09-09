@@ -30,8 +30,8 @@ clear()
 while True:
 
     print('--------------------------------CALCULADORA--------------------------------')
-    num1 = int(input('First number: '))
-    num2 = int(input('Second number: '))
+    num1 = int(input('Digite o primeiro número: '))
+    num2 = int(input('Digite o segundo número: '))
     print('Você deseja:')
     print('1 - somar')
     print('2 - subtrair')
@@ -67,9 +67,9 @@ while True:
         continue
 
     print('---------------------------------------------------------------------------')
-    escolhaE = input('Deseja sair da calculadora? Y/N: ')
+    escolhaE = input('Deseja sair da calculadora? S/N: ')
 
-    if escolhaE == 'Y' or escolhaE == 'y':
+    if escolhaE == 'S' or escolhaE == 's':
         clear()
         break
 
