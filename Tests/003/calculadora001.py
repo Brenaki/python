@@ -55,10 +55,10 @@ while True:
         print('O resultado é {}'.format(multicacao()))
 
     elif escolhaN == '4':
-        print('O resultado é {}'.format(divisao()))
+        print('O resultado é {:.2}'.format(divisao()))
 
     elif escolhaN == '5':
-        print('O resultado é {}'.format(resto_divisao()))
+        print('O resultado é {:.2}'.format(resto_divisao()))
 
     else:
         print('Não consegui enteder o que você digitou, digite novamente')

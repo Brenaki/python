@@ -1,31 +1,45 @@
 # Fazer uma sistema de login, se o usuario
 # estivesse errando a senha, ele poderá redefinir a senha
 # e assim ele poderá logar
+import os
+import time
 
-new_P = '1234'
+def clear():
+    return os.system("cls")
+
+clear()
+
+newP = '1234'
 
 while True:
-    user = input('Your user: ')
-    password = input('Your password: ')
+    user = input('Seu username: ')
+    password = input('Sua senha: ')
     if password != '': 
-        if password != new_P and not '1234' in password :
+        if password != newP and not '1234' in password :
             print('Senha inválida')
-            r_pass = input('Quer redifinir sua senha(N/Y): ')
+            r_pass = input('Quer redifinir sua senha(S/N): ')
             if r_pass == 'N' or r_pass == 'n':
                continue
-            elif r_pass == 'Y' or r_pass == 'y':
-                new_P = input('New password: ')
-                while new_P != password:
-                      user = input('Your user: ')
-                      password = input('Your password: ')
-                      break
+               time.sleep(1)
+               clear()
+            elif r_pass == 's' or r_pass == 's':
+                clear()
+                new_P = input('Nova senha: ')
                 print('Sua nova senha foi redifinida, com Sucesso!')
-                if password == new_P:
+                time.sleep(0.5)
+                clear()
+                while newP != password:
+                      user = input('Seu username:  ')
+                      password = input('Sua senha: ')
+                      break
+                print('{} foi logado!'.format(user))
+                break
+                if password == newP:
                   break
                 else:
                   continue
-        elif password == '1234' or password == new_P:
-            print('Logado!')
+        elif password == '1234' or password == newP:
+            print('{} foi logado!'.format(user))
             break
     else:
       break

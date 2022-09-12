@@ -1,4 +1,11 @@
 # School of Brazil
+
+import os
+def clear():
+    return os.system("cls")
+
+# CODE
+clear()
 print('--------------------__School__--------------------\n')
 
 # Name
