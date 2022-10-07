@@ -1,5 +1,7 @@
 # Sistema
 import os
+from random import randrange
+import mysql.connector
 
 def clear():
     return os.system("cls")
@@ -8,28 +10,25 @@ BD = []
 
 def conectar_bd():
     # Conetando Banco de dados
-    import pyodbc
+    mydb = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="",
+    database="login"
+    )
 
-    dados_conexao = ('Driver={SQLite3 ODBC Driver};'
-                    'Server=localhost;'
-                    'Database=login.db')
-
-    try:
-        conexao = pyodbc.connect(dados_conexao)
-    except:
-        print('Não conectou ao Banco de Dados')
-    
-    cursor = conexao.cursor()
+    mycursor = mydb.cursor()
 
     # Dividindo as informações
-    cursor.execute('SELECT * FROM login')
-    valores = cursor.fetchall()
+    mycursor.execute("USE login")
+    mycursor.execute("SELECT * FROM Login")
+    valores = mycursor.fetchall()
     for colunas in valores:
         ID, username, password = colunas
         BD.append([ID, username, password])
     #Fechando o Banco de Dados
-    cursor.close()
-    conexao.close()
+    mycursor.close()
+    mydb.close()
     return BD
 
 def login(usuario, senha, BD):
@@ -40,24 +39,25 @@ def login(usuario, senha, BD):
             pass
     return print('Credenciais Inválidas!')
     
-def registrar(usuario, username, senha, password):
+def registrar(usuario, senha, BD):
+    # Gerar ID
+    ID = randrange(2, 1000)
+    # Conetando Banco de dados
     for dados in BD:
         if usuario != dados[1] and senha != dados[2]:
             # Conetando Banco de dados
-            import pyodbc
-            dados_conexao = ('Driver={SQLite3 ODBC Driver};'
-                        'Server=localhost;'
-                        'Database=login.db')
-            conexao = pyodbc.connect(dados_conexao)
-            cursor = conexao.cursor()
+            mydb = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database="login"
+            )
+            mycursor = mydb.cursor()
             # Registrando dados
-            cursor.execute('''
-        INSERT INTO Login (User, Password)
-        VALUES
-        ("{}", "{}")
-        '''.format(usuario, senha))
-            cursor.commit()
-            cursor.close()
+            mycursor.execute("INSERT INTO `login`.`Login` (`ID`, `User`, `Password`) VALUES ('{}','{}', '{}');".format(ID, usuario, senha))
+            mydb.commit()
+            mycursor.close()
+            mydb.close()
             return print('{} você foi registrado!'.format(usuario))
         else:
             pass
