@@ -66,5 +66,5 @@ while True:
     
     num1, num2 = float(numeros[0]), float(numeros[1])
     resultado = operacoes[operador](num1, num2)
-    print(resultado)
+    print('{}'.format(resultado))
     input('Pressione Enter para continuar...')
