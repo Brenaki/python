@@ -1,16 +1,13 @@
-from player import Player as py
-
 class GameController:
-    def __init__(self):
-        self.word = GameController.choose_word()
-        self.life = len(self.word)
-        
+    def __init__(self, word):
+        self.word = word
+
     def game_over():
         GameController.clear_screen()
         print('**********************GAME OVER**********************')
 
     def clear_screen():
-        import os 
+        import os
         os.system('cls' if os.name == 'nt' else 'clear')
 
     def choose_word():
@@ -30,7 +27,7 @@ class GameController:
 
         # Return word
         return forca
-    
+
     def check_letter(word, letter):
         letter = letter.lower()
         for i in range(len(word)):
