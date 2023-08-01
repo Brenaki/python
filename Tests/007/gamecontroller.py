@@ -2,12 +2,12 @@ from player import Player as py
 
 class GameController:
     def __init__(self):
-        self.word = GameController.save_word()
-        self.player = py(self.word)
-
-    def save_word():
-        word = GameController.choose_word()
-        return word
+        self.word = GameController.choose_word()
+        self.life = len(self.word)
+        
+    def game_over():
+        GameController.clear_screen()
+        print('**********************GAME OVER**********************')
 
     def clear_screen():
         import os 
